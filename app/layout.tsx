@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Satisfy, Cormorant_Garamond, Montserrat } from 'next/font/google';
 import './globals.css';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const satisfy = Satisfy({
   weight: '400',
@@ -44,7 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-AR" className={`${satisfy.variable} ${cormorant.variable} ${montserrat.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
