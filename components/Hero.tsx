@@ -1,3 +1,5 @@
+import { getWhatsAppUrl } from '@/config/contact';
+
 export default function Hero() {
   return (
     <section className="bg-blush py-16 md:py-24 px-6 md:px-12">
@@ -13,9 +15,24 @@ export default function Hero() {
             <p className="font-montserrat text-base md:text-lg text-cacao/80 leading-relaxed">
               Blusas, faldas y textiles en tonos pastel, pensados para acompañarte todos los días.
             </p>
-            <button className="bg-cacao text-crema font-montserrat text-sm px-8 py-3 rounded-full hover:bg-cacao/90 transition-colors">
-              VER COLECCIÓN
-            </button>
+            <div className="flex flex-wrap gap-4">
+              <a 
+                href={getWhatsAppUrl('¡Hola! Quiero ver la colección completa.')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-cacao text-crema font-montserrat text-sm px-8 py-3 rounded-full hover:bg-cacao/90 transition-colors"
+              >
+                VER COLECCIÓN
+              </a>
+              <a 
+                href={getWhatsAppUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-transparent border-2 border-cacao text-cacao font-montserrat text-sm px-8 py-3 rounded-full hover:bg-cacao hover:text-crema transition-colors"
+              >
+                CONSULTAR POR WHATSAPP
+              </a>
+            </div>
           </div>
           <div className="relative">
             <div className="aspect-[3/4] bg-nude/30 rounded-3xl overflow-hidden">

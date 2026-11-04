@@ -1,3 +1,5 @@
+import { getWhatsAppUrl } from '@/config/contact';
+
 export default function Footer() {
   return (
     <footer className="bg-cacao text-crema py-12 px-6 md:px-12">
@@ -19,7 +21,7 @@ export default function Footer() {
             </a>
             <span>·</span>
             <a 
-              href="https://wa.me/5491123456789" 
+              href={getWhatsAppUrl()} 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-rosa transition-colors"

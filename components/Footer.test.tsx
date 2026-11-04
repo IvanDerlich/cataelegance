@@ -23,6 +23,16 @@ describe('Footer Component', () => {
     expect(screen.getByText('Email')).toBeInTheDocument();
   });
 
+  it('renders correct WhatsApp link with Cata number', () => {
+    render(<Footer />);
+    
+    const whatsappLink = screen.getByText('WhatsApp').closest('a');
+    expect(whatsappLink).toHaveAttribute('href');
+    const href = whatsappLink?.getAttribute('href') || '';
+    expect(href).toContain('wa.me/5492617776394');
+    expect(href).toContain('text=');
+  });
+
   it('renders copyright information', () => {
     render(<Footer />);
     
