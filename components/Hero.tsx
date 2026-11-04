@@ -19,9 +19,11 @@ export default function Hero() {
           </div>
           <div className="relative">
             <div className="aspect-[3/4] bg-nude/30 rounded-3xl overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="w-64 h-80 bg-gradient-to-br from-rosa/20 to-nude/40 rounded-2xl" />
-              </div>
+              <img
+                src="/images/hero.jpg"
+                alt="Colección de moda femenina en tonos pastel"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
