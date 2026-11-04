@@ -7,10 +7,14 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Escribinos por WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-rosa text-crema rounded-full shadow-lg hover:scale-110 transition-transform duration-300 md:bottom-8 md:right-8"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 md:bottom-8 md:right-8"
       style={{
-        paddingBottom: 'env(safe-area-inset-bottom)',
-        paddingRight: 'env(safe-area-inset-right)',
+        ...{
+          paddingBottom: 'env(safe-area-inset-bottom)',
+          paddingRight: 'env(safe-area-inset-right)',
+        },
+        backgroundColor: '#25D366',
+        color: '#FFFFFF',
       }}
     >
       <svg
