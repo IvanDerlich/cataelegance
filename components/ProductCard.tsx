@@ -14,9 +14,11 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group cursor-pointer">
       <div className="aspect-[3/4] bg-crema/50 rounded-2xl overflow-hidden mb-4 relative">
-        <div className="w-full h-full flex items-center justify-center">
-          <div className="w-3/4 h-3/4 bg-gradient-to-br from-nude/40 to-rosa/20 rounded-xl group-hover:scale-105 transition-transform duration-300" />
-        </div>
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        />
       </div>
       <h3 className="font-cormorant text-xl md:text-2xl text-cacao font-medium mb-2">
         {product.name}
